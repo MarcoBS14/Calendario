@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservas | Punta Tiburón</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <h1>Reserva tu cancha en <span class="accent">Punta Tiburón</span></h1>
+        <p class="lead">Tenis o pádel, agenda tu horario en segundos y disfruta instalaciones de primer nivel.</p>
+        <div style="margin-top:16px">
+          <span class="badge">Atención</span>
+          <span class="tag">Máx. {{weeklyCap}} reservas por semana y jugador.</span>
+        </div>
+      </div>
+      <div class="card">
+        <!-- FORM BASICO -->
+        <div class="row" style="margin-bottom:10px">
+          <div>
+            <div class="label">Deporte</div>
+            <select id="sport" class="select">
+              <option value="tenis">Tenis</option>
+              <option value="padel">Pádel</option>
+            </select>
+          </div>
+          <div>
+            <div class="label">Cancha</div>
+            <select id="court" class="select">
+              <option value="1">Cancha 1</option>
+              <option value="2">Cancha 2</option>
+              <option value="3">Cancha 3</option>
+              <option value="4">Cancha 4</option>
+              <option value="5">Cancha 5</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row" style="margin-bottom:10px">
+          <div>
+            <div class="label">Fecha</div>
+            <input id="date" type="date" class="input">
+          </div>
+          <div>
+            <div class="label">Duración</div>
+            <select id="duration" class="select">
+              <option value="60">1 hora</option>
+              <option value="120">2 horas</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <div class="label">Horarios disponibles</div>
+          <div id="slots" class="grid"></div>
+        </div>
+
+        <div class="row" style="margin-top:10px">
+          <div>
+            <div class="label">Nombre</div>
+            <input id="name" class="input" placeholder="Nombre y Apellido">
+          </div>
+          <div>
+            <div class="label">WhatsApp / Teléfono</div>
+            <input id="phone" class="input" placeholder="+52 ...">
+          </div>
+        </div>
+
+        <button id="reserveBtn" class="button" style="margin-top:12px">Confirmar reserva</button>
+        <div id="msg" class="msg" style="display:none"></div>
+        <div class="footer">¿Dudas? Escríbenos. Llega 10 min antes de tu horario.</div>
+      </div>
+    </section>
+
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
